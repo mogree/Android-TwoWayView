@@ -5683,7 +5683,7 @@ public class TwoWayView extends AdapterView<ListAdapter> implements
 			mSyncPosition = mFirstPosition;
 
 			if (child != null) {
-				mSpecificStart = child.getTop();
+				mSpecificStart = (mIsVertical ? child.getTop() : child.getLeft());
 			}
 
 			mSyncMode = SYNC_FIRST_POSITION;
